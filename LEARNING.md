@@ -66,3 +66,41 @@ que o `flex-direction` seja `row`
 que o `flex-direction` seja `row`
 - `align-content` permite o alinhamento dos items em um container flex com `flex-wrap`
 - o .editorconfig é um arquivo com configurações para o nosso code editor
+
+## Aula 6 
+
+- um component agrupa conteudo e tambem comportamento que faça sentido estarem juntos
+- utilizamos imagens como background em imagens que nao se remetem ao conteudo
+- utilizamos imagens com a tag img, imgens que se remetem ao conteudo
+
+## Aula 7
+
+- a função `rgba(red, green, blue, alpha)` permite declarar uma cor com transparência
+- utilize `aria-hidden="true"` em elementos abertos sem conteúdo para que o leitor de tela
+não interprete o elemento
+- ARIA é a API de acessibilidade do HTML
+- os pseudo-elementos nos permitem aplicar estilo em um conteúdo interno de um elemento, 
+por exemplo: `::first-letter` primeira letra, `::first-line` primeira linha, `::selection` 
+que é o conteúdo selecionado pelo cursor ...
+- com os pseudo-elementos `::before` e `::after` conseguimos adicionar um elemento antes ou
+depois do conteúdo de um elemento
+- tanto no `::before` quanto `::after` devemos declarar a propriedade `content`
+- `::before` e `::after` por padrão tem o `display: inline`
+
+## Aula 8
+
+- o grid layout provê um modo eficiente de dispor, alinhar e distribuir espaçamento
+entre linhas e colunas contidas em um elemento com `display: grid`
+- o grid layout é bidirecional, ou seja conseguimos trabalhar com os dos eixos
+(x para linhas e y para colunas) ao mesmo tempo
+- através da função `repeat` conseguimos repetir dimensões das linhas e colunas
+- a propriedade `gap` permite declarar a distância entre linhas e colunas
+- idealmente criamos classes com estilos desacoplados para reutilização de código,
+ exemplo: classe `.grid` sabe estilizar um grid, classe `.grid-col-2` diz quantas colunas tem o grid
+
+ ## Aula 9
+ - o valor `inherit` é utilizado para herdar o valor de alguma propriedade de um elemento ancestral que tenha declarado tal propriedade
+ - é possivel utilizar features experimentais no css utilizando vendor preffix exemplo
+ `display: -webkit-box`
+ - quando uma feature se torna especificação o vendor prefix não é mais obrigatório
+ - podemos utilizar features experimentais em produção contanto que nao haja quebra de layout

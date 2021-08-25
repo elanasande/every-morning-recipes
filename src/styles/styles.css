@@ -20,8 +20,22 @@ body{
     margin: 0;
 }
 
+.wrapper{
+    margin: 20px auto;
+    width: 70%;
+    max-width: 1000px;
+}
+
+.grid{
+    display: grid;
+    gap: 20px;
+}
+
+.grid-col-2{
+    grid-template-columns: 1fr 1fr;
+}
+
 .header{
-    margin: 30px auto;
     width: 70%;
     padding: 30px 70px 16px;
     background:  linear-gradient(rgba(119, 98, 178, 0.6), rgba(119, 98, 178, 0.6)), url(../assets/images/header-cover.jpg);
@@ -31,8 +45,15 @@ body{
     border-radius: 8px;
     color: #FFF;
 }
+
 h1, h2, h3, h4, h5{
     font-family: 'Raleway';
+}
+
+a{
+    color: inherit;
+    outline: none;
+    text-decoration: none;
 }
 
 .header-title{
@@ -77,3 +98,100 @@ h1, h2, h3, h4, h5{
     opacity: 0.7;
 }
 
+.overlay{
+    position: relative;
+}
+
+.overlay::before{
+
+    position: absolute;
+    content: ' ';
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.overlay-yellow::before{
+    background-color: rgba(215, 215, 98, 0.6)
+    /* #d7d762; */
+}
+
+.overlay-red::before{
+    background-color: rgba(185, 82, 59, 0.6);
+}
+
+.card-highlight{
+    border-radius: 8px;
+    color: #FFF;
+    overflow: hidden;
+    display: flex;
+    height: 40vh;
+    padding: 16px 32px;
+    position: relative;
+}
+
+.card{
+    background-color: #FFF;
+    border-radius: 10px;
+    color: #000;
+    overflow: hidden;
+    display: flex;
+}
+
+.card-image{
+    width: 35%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-highlight-info{
+    position: relative;
+    align-self: flex-end;
+    z-index: 2;
+}
+
+.card-info{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.card-highlight-title{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.card-title{
+    margin: 8px 0;
+    font-size: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-highlight-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+}
+
+.author-image{
+    width: 48px;
+    border-radius: 50%;
+}
