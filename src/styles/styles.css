@@ -56,7 +56,7 @@ a{
     text-decoration: none;
 }
 
-.header-title{
+.header__title{
     font-size: 48px;
     letter-spacing: 1.5px;
     margin-bottom: 4px;
@@ -69,32 +69,32 @@ a{
     align-items: center;
 }
 
-.social-media-label{
+.social-media__label{
     font-size: 16px;
     letter-spacing: 2px;
     margin-right: 8px;
     text-transform: uppercase;
 }
 
-.social-media-list{
+.social-media__list{
     list-style: none;  
     padding: 0;
     margin:0;
 }
 
-.social-media-item{
+.social-media__item{
     width: 28px;
     margin: 0 8px;
     display: inline-block;
 }
 
-.social-media-link{
+.social-media__link{
     outline: none;
     opacity: 1;
     transition: opacity 150ms ease-in;
 }
 
-.social-media-link:focus, .social-media-link:hover{
+.social-media__link:focus, .social-media__link:hover{
     opacity: 0.7;
 }
 
@@ -114,12 +114,12 @@ a{
     z-index: 1;
 }
 
-.overlay-yellow::before{
+.overlay--yellow::before{
     background-color: rgba(215, 215, 98, 0.6)
     /* #d7d762; */
 }
 
-.overlay-red::before{
+.overlay--red::before{
     background-color: rgba(185, 82, 59, 0.6);
 }
 
@@ -140,20 +140,27 @@ a{
     overflow: hidden;
     display: flex;
 }
+.card--vertical{
+    flex-direction: column;
+}
 
-.card-image{
+.card--vertical .card__image{
+    width: 100%;
+}
+
+.card__image{
     width: 35%;
     object-fit: cover;
     display: block;
 }
 
-.card-highlight-info{
+.card-highlight__info{
     position: relative;
     align-self: flex-end;
     z-index: 2;
 }
 
-.card-info{
+.card__info{
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -162,13 +169,13 @@ a{
     
 }
 
-.card-highlight-title{
+.card-highlight__title{
     color: #FFF;
     text-decoration: none;
     font-size: 36px;
 }
 
-.card-title{
+.card__title{
     margin: 8px 0;
     font-size: 24px;
     display: -webkit-box;
@@ -177,7 +184,7 @@ a{
     overflow: hidden;
 }
 
-.card-highlight-image{
+.card-highlight__image{
     position: absolute;
     top: 0;
     left: 0;
@@ -191,7 +198,8 @@ a{
     align-items: center;
 }
 
-.author-image{
+.author__image{
     width: 48px;
     border-radius: 50%;
+    margin-right: 8px;
 }
